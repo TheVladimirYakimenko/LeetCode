@@ -1,5 +1,5 @@
-def missingNumber(nums: list[int]) -> int:
-    sum_nums = sum(nums)
-    return (len(nums) + 1) * len(nums) // 2 - sum_nums
-
-print(missingNumber([0, 1, 2, 4, 3]))
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        sum_nums = sum(nums)
+        sum_total = (len(nums) + 1) * len(nums) // 2
+        return sum_total - sum_nums
