@@ -6,13 +6,13 @@ class Solution:
             ']': '['
         }
 
-        queue = []
+        stack = []
         for staple in s:
             if staple in '})]':
-                if not queue or queue[-1] != staples[staple]:
+                if not stack or stack[-1] != staples[staple]:
                     return False
-                queue.pop()
+                stack.pop()
             else:
-                queue.append(staple)
+                stack.append(staple)
 
-        return not queue
+        return not stack
